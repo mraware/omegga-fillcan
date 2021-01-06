@@ -1,0 +1,32 @@
+{
+  "name": "Building-fill",
+  "description": "Fill tool for building",
+  "author": "Aware",
+  "commands": [
+    {
+      "name": "/fill",
+      "description": "Replace a color with another color",
+      "example": "/fill false",
+      "args": [
+        {
+          "name": "ignoreMaterials",
+          "description": "Ignore material of brick when filling",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "/fillGet",
+      "description": "The color you want to replace, pull out paint tool and choose a color then type the command.",
+      "example": "/fillGet",
+      "args": []
+    },
+    {
+      "name": "/fillSet",
+      "description": "The color you want to set, pull out paint tool and choose a color then type the command.",
+      "example": "/fillSet",
+      "args": []
+    }
+  ],
+  "config": {}
+}
