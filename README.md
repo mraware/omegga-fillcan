@@ -1,10 +1,10 @@
-# Clone plugin
+# Fillcan plugin
 
-Fill the color of a selection of bricks with a preselected color
+Fill the color of a selection of bricks with a preselected color and load at the ghost brick location
 
 ## Install
 
-* `git clone https://github.com/mraware/omegga-clone clone` in `plugins` directory
+* `git clone https://github.com/mraware/omegga-fillcan fillcan` in `plugins` directory
 
 ## Commands
 
