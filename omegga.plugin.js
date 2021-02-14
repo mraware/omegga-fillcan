@@ -11,10 +11,10 @@ class BuildingFill {
     this.omegga
       .on('cmd:fill', this.fill)
       .on('cmd:fillall', this.fillAll)
-      .on('cmd:getfill', this.fillGet);
+      .on('cmd:fillcolor', this.fillGet);
 
     return {
-      registeredCommands: ['fill', 'fillall', 'getfill']
+      registeredCommands: ['fill', 'fillall', 'fillcolor']
     };
   }
 
@@ -113,7 +113,7 @@ class BuildingFill {
     this.omegga
       .removeListener('cmd:fill', this.fill)
       .removeListener('cmd:fillall', this.fillAll)
-      .removeListener('cmd:getfill', this.fillGet);
+      .removeListener('cmd:fillcolor', this.fillGet);
   }
 }
 

@@ -28,9 +28,9 @@
       ]
     },
     {
-      "name": "/getFill",
+      "name": "/fillColor",
       "description": "The color you want to replace, pull out paint tool and choose a color then type the command.",
-      "example": "/getFill",
+      "example": "/fillColor",
       "args": []
     }
   ],
