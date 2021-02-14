@@ -41,7 +41,7 @@ class BuildingFill {
       const nameColor = player.getNameColor();
       this.omegga.broadcast(`<b><color="${nameColor}">${senderName}</></> filling... <color="${op.hexSRGB}">${op.material} #${op.hexLinear}</> → <color="${np.hexSRGB}">${np.material} #${np.hexLinear}</>`);
       let saveData = await player.getTemplateBoundsData();
-      const colorIndex = saveData.colors.findIndex((color) => color.every((value, index) => value === oldColor.color[index]));
+      const colorIndex = saveData.colors.findIndex((color) => color.slice(0,3).every((value, index) => value === oldColor.color[index]));
       const oldMaterialIndex = saveData.materials.indexOf(oldColor.material);
       const newMaterialIndex = saveData.materials.indexOf(newColor.material);
       saveData.bricks = saveData.bricks.map((brick) => {
@@ -72,7 +72,6 @@ class BuildingFill {
     this.omegga.broadcast(`<b><color="${nameColor}">${senderName}</></> filling all...  <color="${np.hexSRGB}">${ignoreMaterials ? '' : np.material + ' '}#${np.hexLinear}</>`);
     let saveData = await player.getTemplateBoundsData();
     const newMaterialIndex = saveData.materials.indexOf(newColor.material);
-    console.log(newMaterialIndex);
     saveData.bricks = saveData.bricks.map((brick) => {
       brick = {
         ...brick,
