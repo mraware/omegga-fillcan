@@ -5,8 +5,8 @@
   "commands": [
     {
       "name": "/fill",
-      "description": "Replace a color with another color",
-      "example": "/fill false",
+      "description": "Replace the color selected with /getFill with the active paint color",
+      "example": "/fill",
       "args": [
         {
           "name": "ignoreMaterials",
@@ -16,17 +16,34 @@
       ]
     },
     {
-      "name": "/fillGet",
-      "description": "The color you want to replace, pull out paint tool and choose a color then type the command.",
-      "example": "/fillGet",
-      "args": []
+      "name": "/fillAll",
+      "description": "Replace all colors with active paint color",
+      "example": "/fillAll",
+      "args": [
+        {
+          "name": "ignoreMaterials",
+          "description": "Ignore material of brick when filling",
+          "required": false
+        }
+      ]
     },
     {
-      "name": "/fillSet",
-      "description": "The color you want to set, pull out paint tool and choose a color then type the command.",
-      "example": "/fillSet",
+      "name": "/getFill",
+      "description": "The color you want to replace, pull out paint tool and choose a color then type the command.",
+      "example": "/getFill",
       "args": []
     }
   ],
-  "config": {}
+  "config": {
+    "only-authorized": {
+      "description": "Whether only authorized players can use fill commands",
+      "type": "boolean",
+      "default": true
+    },
+    "authorized-users": {
+      "description": "List of players who can always use fill commands",
+      "type": "players",
+      "default": []
+    }
+  }
 }
